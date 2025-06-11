@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Logical Reasoning Practice Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .answers {
+      list-style: none;
+      padding-left: 0;
+    }
+    .answers li {
+      margin: 5px 0;
+    }
+    .submit-btn {
+      margin-top: 20px;
+    }
+    .result {
+      margin-top: 30px;
+      padding: 15px;
+      border-top: 2px solid #ccc;
+    }
+    .correct {
+      color: green;
+    }
+    .incorrect {
+      color: red;
+    }
+    .explanation {
+      margin-top: 20px;
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CIVIL SERVICE EXAM PRACTICE TEST</h1>
+  <h3>CREATED BY: CSE LEARNING ESSENTIALS</h3>
+  <h2>SECTION 2: ANALYTICAL ABILITY</h2>
+  <h3>PART 3: LOGICAL REASONING</h3>
+  <p><strong>PRACTICE TEST</strong> | <strong>5-ITEM TEST</strong> | <strong>PASSING SCORE: 3</strong></p>
+
+  <p><em>Directions:</em> Read each question and choose the correct answer.</p>
+
+  <form id="quiz-form">
+    <div class="question">
+      <p>1. If the day before yesterday was Wednesday, then which day comes one day after tomorrow?</p>
+      <ul class="answers">
+        <li><label><input type="radio" name="q1" value="A"> A. Friday</label></li>
+        <li><label><input type="radio" name="q1" value="B"> B. Saturday</label></li>
+        <li><label><input type="radio" name="q1" value="C"> C. Sunday</label></li>
+        <li><label><input type="radio" name="q1" value="D"> D. Monday</label></li>
+      </ul>
+    </div>
+
+    <div class="question">
+      <p>2. Which day comes 1 day after Sunday?</p>
+      <ul class="answers">
+        <li><label><input type="radio" name="q2" value="A"> A. Monday</label></li>
+        <li><label><input type="radio" name="q2" value="B"> B. Saturday</label></li>
+        <li><label><input type="radio" name="q2" value="C"> C. Sunday</label></li>
+        <li><label><input type="radio" name="q2" value="D"> D. Friday</label></li>
+      </ul>
+    </div>
+
+    <div class="question">
+      <p>3. If the day before yesterday was the 23rd, then what will be the day after tomorrow?</p>
+      <ul class="answers">
+        <li><label><input type="radio" name="q3" value="A"> A. The 25th</label></li>
+        <li><label><input type="radio" name="q3" value="B"> B. The 26th</label></li>
+        <li><label><input type="radio" name="q3" value="C"> C. The 27th</label></li>
+        <li><label><input type="radio" name="q3" value="D"> D. The 28th</label></li>
+      </ul>
+    </div>
+
+    <div class="question">
+      <p>4. The day before two days after the day before tomorrow is Saturday. What day is it today?</p>
+      <ul class="answers">
+        <li><label><input type="radio" name="q4" value="A"> A. Tuesday</label></li>
+        <li><label><input type="radio" name="q4" value="B"> B. Wednesday</label></li>
+        <li><label><input type="radio" name="q4" value="C"> C. Thursday</label></li>
+        <li><label><input type="radio" name="q4" value="D"> D. Friday</label></li>
+      </ul>
+    </div>
+
+    <div class="question">
+      <p>5. If the day before yesterday was Thursday. When will Sunday be?</p>
+      <ul class="answers">
+        <li><label><input type="radio" name="q5" value="A"> A. Tomorrow</label></li>
+        <li><label><input type="radio" name="q5" value="B"> B. Day after tomorrow</label></li>
+        <li><label><input type="radio" name="q5" value="C"> C. Two days after tomorrow</label></li>
+        <li><label><input type="radio" name="q5" value="D"> D. Yesterday</label></li>
+      </ul>
+    </div>
+
+    <div class="submit-btn">
+      <button type="button" onclick="submitQuiz()">Submit</button>
+    </div>
+  </form>
+
+  <div id="result" class="result"></div>
+
+  <div id="explanation" class="explanation" style="display:none;">
+    <h3>Explanations:</h3>
+    <ol>
+      <li><strong>C. Sunday</strong><br>Day before yesterday = Wednesday → Yesterday = Thursday → Today = Friday → Tomorrow = Saturday → One day after tomorrow = <strong>Sunday</strong>.</li>
+      <li><strong>A. Monday</strong><br>One day after Sunday is clearly <strong>Monday</strong>.</li>
+      <li><strong>C. The 27th</strong><br>Day before yesterday = 23rd → Today = 25th → Day after tomorrow = <strong>27th</strong>.</li>
+      <li><strong>D. Friday</strong><br>"Day before tomorrow" = today → “Two days after today” = one day after tomorrow = <strong>Saturday</strong>, so today = <strong>Friday</strong>.</li>
+      <li><strong>A. Tomorrow</strong><br>Day before yesterday = Thursday → Today = Saturday → Tomorrow = <strong>Sunday</strong>.</li>
+    </ol>
+  </div>
+
+  <div class="social-link">
+    <p>Follow us on <a href="https://www.facebook.com/cselearningessentials/" target="_blank" rel="noopener noreferrer">Facebook</a> for more updates!</p>
+    <p>Subscribe to our YouTube Channel <a href="https://www.youtube.com/@cselearningessentialsph2023" target="_blank" rel="noopener noreferrer">here</a> for more content!</p>
+  </div>
+
+  <div class="advertisement">
+    <img src="images/advertisement.png" alt="Civil Service E-book" style="width: 100%; max-width: 400px; display: block; margin: 0 auto 15px auto; border-radius: 5px;">
+    <p>Avail our latest Civil Service Exam Reviewer E-books. Direct message us for more details!</p>
+  </div>
+
+  <script>
+    function submitQuiz() {
+      const answers = {
+        q1: "C",
+        q2: "A",
+        q3: "C",
+        q4: "D",
+        q5: "A"
+      };
+
+      let score = 0;
+      let resultText = "";
+
+      for (let i = 1; i <= 5; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        const correct = answers[`q${i}`];
+        if (selected) {
+          const selectedVal = selected.value;
+          const parent = selected.parentElement;
+          if (selectedVal === correct) {
+            parent.classList.add("correct");
+            resultText += `<p class="correct">Q${i}: Correct ✅</p>`;
+            score++;
+          } else {
+            parent.classList.add("incorrect");
+            const correctText = document.querySelector(`input[name="q${i}"][value="${correct}"]`).parentElement.textContent.trim();
+            resultText += `<p class="incorrect">Q${i}: Incorrect ❌. Correct answer: ${correctText}</p>`;
+          }
+        } else {
+          const correctText = document.querySelector(`input[name="q${i}"][value="${correct}"]`).parentElement.textContent.trim();
+          resultText += `<p class="incorrect">Q${i}: Not answered ❌. Correct answer: ${correctText}</p>`;
+        }
+      }
+
+      const status = score >= 3 ? "Passed ✅" : "Failed ❌";
+      document.getElementById("result").innerHTML = `<h3>Your Score: ${score} / 5 - ${status}</h3><div>${resultText}</div>`;
+      document.getElementById("explanation").style.display = "block";
+      document.getElementById("result").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
