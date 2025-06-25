@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Logical Reasoning - Code Pattern Practice Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #003366;
+    }
+    .question {
+      margin-bottom: 25px;
+    }
+    .answers {
+      list-style: none;
+      padding-left: 0;
+    }
+    .answers li {
+      margin: 6px 0;
+    }
+    .submit-btn {
+      margin-top: 20px;
+    }
+    .result, .explanation {
+      margin-top: 20px;
+      padding: 15px;
+      border-top: 2px solid #ccc;
+      background-color: #f9f9f9;
+    }
+    .correct {
+      color: green;
+      font-weight: bold;
+    }
+    .incorrect {
+      color: red;
+      font-weight: bold;
+    }
+    .advertisement {
+      margin-top: 40px;
+      padding: 20px;
+      background: #e6f2ff;
+      border-left: 5px solid #3399ff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CIVIL SERVICE EXAM PRACTICE TEST</h1>
+  <h3>CREATED BY: CSE LEARNING ESSENTIALS</h3>
+  <h2>SECTION 2: ANALYTICAL ABILITY</h2>
+  <h3>PART 3: LOGICAL REASONING</h3>
+  <p><strong>PRACTICE TEST</strong> | <strong>5-ITEM TEST</strong> | <strong>PASSING SCORE: 3</strong></p>
+  <p><em>Directions:</em> Read each question and choose the correct answer.</p>
+
+  <form id="quiz-form">
+    <!-- Question 1 -->
+    <div class="question">
+      <p><strong>1.</strong> If LEARNED is coded as OHDUQHG, how would PASSION be coded?</p>
+      <ul class="answers">
+        <li><label><input type="radio" name="q1" value="A"> A. SDVVLRQ</label></li>
+        <li><label><input type="radio" name="q1" value="B"> B. SDVVLQR</label></li>
+        <li><label><input type="radio" name="q1" value="C"> C. SBUVLRQ</label></li>
+        <li><label><input type="radio" name="q1" value="D"> D. SDWWLRQ</label></li>
+        <li><label><input type="radio" name="q1" value="E"> E. PBVVLRQ</label></li>
+      </ul>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+      <p><strong>2.</strong> If GROWTH is coded as LWTBYM, how would FUTURE be coded?</p>
+      <ul class="answers">
+        <li><label><input type="radio" name="q2" value="A"> A. KZYZWJ</label></li>
+        <li><label><input type="radio" name="q2" value="B"> B. KZUZWJ</label></li>
+        <li><label><input type="radio" name="q2" value="C"> C. KZAZWJ</label></li>
+        <li><label><input type="radio" name="q2" value="D"> D. KZYWZJ</label></li>
+        <li><label><input type="radio" name="q2" value="E"> E. KZTZWJ</label></li>
+      </ul>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+      <p><strong>3.</strong> If JOURNEY is coded as FKQNJAU, how would SUCCESS be coded using the same letter shift rule?</p>
+      <ul class="answers">
+        <li><label><input type="radio" name="q3" value="A"> A. OQYYAOO</label></li>
+        <li><label><input type="radio" name="q3" value="B"> B. OQXYAOP</label></li>
+        <li><label><input type="radio" name="q3" value="C"> C. OQYYZOO</label></li>
+        <li><label><input type="radio" name="q3" value="D"> D. OQYYAOO</label></li>
+        <li><label><input type="radio" name="q3" value="E"> E. ORYYAOO</label></li>
+      </ul>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question">
+      <p><strong>4.</strong> In a certain code, TRAINING is written as UQBHOHOF. How is REVIVAL written in that code?</p>
+      <ul class="answers">
+        <li><label><input type="radio" name="q4" value="A"> A. SDWGWZM</label></li>
+        <li><label><input type="radio" name="q4" value="B"> B. SEWHWZM</label></li>
+        <li><label><input type="radio" name="q4" value="C"> C. SDXHWZM</label></li>
+        <li><label><input type="radio" name="q4" value="D"> D. SDWHWZM</label></li>
+        <li><label><input type="radio" name="q4" value="E"> E. None of the above</label></li>
+      </ul>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question">
+      <p><strong>5.</strong> In a certain code, BRAVE is written as BSCYI. How is SILENCE written in that code?</p>
+      <ul class="answers">
+        <li><label><input type="radio" name="q5" value="A"> A. TJNHRIK</label></li>
+        <li><label><input type="radio" name="q5" value="B"> B. SJNHRHK</label></li>
+        <li><label><input type="radio" name="q5" value="C"> C. SJOISIL</label></li>
+        <li><label><input type="radio" name="q5" value="D"> D. RJNGRIJ</label></li>
+        <li><label><input type="radio" name="q5" value="E"> E. SJNGQHK</label></li>
+      </ul>
+    </div>
+
+    <div class="submit-btn">
+      <button type="button" onclick="submitQuiz()">Submit</button>
+    </div>
+  </form>
+
+  <div id="result" class="result"></div>
+
+  <div id="explanation" class="explanation" style="display:none;">
+    <h3>Answer Key and Solutions:</h3>
+    <p><strong>1. A. SDVVLRQ</strong> → Apply +3 letter shift to each letter in PASSION</p>
+    <p><strong>2. A. KZYZWJ</strong> → Apply +5 letter shift to FUTURE</p>
+    <p><strong>3. D. OQYYAOO</strong> → Apply –4 to each letter in SUCCESS</p>
+    <p><strong>4. D. SDWHWZM</strong> → Alternate +1, –1 shifts</p>
+    <p><strong>5. B. SJNHRHK</strong> → Shift pattern used in BRAVE: +0, +1, +2, +3, +4…</p>
+  </div>
+
+  <div class="advertisement">
+    <h3>📘 Need More Review Materials?</h3>
+    <p>Follow us on <a href="https://www.facebook.com/cselearningessentials/" target="_blank">Facebook</a> and subscribe to our <a href="https://www.youtube.com/@cselearningessentialsph2023" target="_blank">YouTube channel</a> for daily drills and reviewer e-books.</p>
+    <p><strong>Join our FB chat group for free reviewers. Send us a message!</strong></p>
+  </div>
+
+  <script>
+    function submitQuiz() {
+      const correctAnswers = {
+        q1: "A",
+        q2: "A",
+        q3: "D",
+        q4: "D",
+        q5: "B"
+      };
+      let score = 0;
+
+      for (let i = 1; i <= 5; i++) {
+        const q = document.querySelector(`input[name="q${i}"]:checked`);
+        const correct = correctAnswers[`q${i}`];
+        if (q) {
+          if (q.value === correct) {
+            q.parentElement.style.color = "green";
+            score++;
+          } else {
+            q.parentElement.style.color = "red";
+          }
+        }
+      }
+
+      const result = document.getElementById("result");
+      result.innerHTML = `<h3>Your Score: ${score}/5</h3><p class="${score >= 3 ? 'correct' : 'incorrect'}">${score >= 3 ? 'PASSED ✅' : 'FAILED ❌'}</p>`;
+
+      document.getElementById("explanation").style.display = "block";
+      document.querySelectorAll("input[type=radio]").forEach(el => el.disabled = true);
+    }
+  </script>
+
+</body>
+</html>
